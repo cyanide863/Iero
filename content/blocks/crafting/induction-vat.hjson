@@ -1,0 +1,88 @@
+type: multicraft.MultiCrafter
+name: Induction Vat
+description: Melts down ores into their base components using electric induction coils. Highly inefficient, but it will get the job done.
+size: 3
+health: 450
+category: crafting
+researchCost: [
+  tungsten1/25
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 40
+hasLiquids: true
+ambientSound: flux
+ambientSoundVolume: 0.08
+itemCapacity: 12
+requirements: [
+  tungsten1/50
+]
+recipes: [
+{
+  input: {
+    items: [
+      iero-magnetite/4
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      iero-molten-vanadium/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      iero-dolomite/4
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      iero-molten-magnesium/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      
+      //pixels from edge to do it from
+      padding: 4
+      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
+      
+      //liquid to draw
+      drawLiquid: molten-vanadium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 4
+      drawLiquid: molten-magnesium
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: drawCrucibleFlame
+      particleLife: 180
+      particleRad: 5
+      particleSize: 1.5
+      rotateScl: 5.5
+      flameColor: f9938a
+      particleInterp: pow5Out
+      particles: 70
+    }
+  ]
+}
+research: core-veil
