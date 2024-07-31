@@ -1,0 +1,203 @@
+type: ItemTurret
+name: Recurse
+description: Fires alternating projectiles at enemies.
+size: 3
+health: 1450
+category: turret
+range: 180
+squareSprite: false
+reload: 30
+shootSound: shootAlt
+inaccuracy: 2
+rotateSpeed: 2
+shootCone: 3
+shootY: 4
+outlineColor: 0f0f14
+recoils: 2
+shake: 1
+requirements: [
+  tungsten1/85
+  vanadium/50
+]
+researchCost: [
+  tungsten1/175
+  vanadium/105
+]
+shoot: {
+  type: ShootAlternate
+  spread: 8
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: insulated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      mirror: false
+      under: true
+      progress: recoil
+      x: 4.25
+      y: 5
+      recoilIndex: 1
+      moveY: -2.4
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      mirror: false
+      under: true
+      progress: recoil
+      x: -4.25
+      y: 5
+      recoilIndex: 0
+      moveY: -2.4
+    }
+  ]
+}
+ammoTypes: {
+  tungsten1: {
+    type: MissileBulletType
+    trailEffect: none
+    sprite: bullet
+    homingPower: 0
+    damage: 30
+    speed: 3
+    weaveScale: 1.7
+    weaveMag: 2
+    lifetime: 45
+    reloadMuliiplier: .8
+    ammoMultiplier: 2
+    shrinkX: 0.2
+    shrinkY: 0.8
+    trailLength: 10
+    width: 10
+    height: 16
+    trailColor: 66875d
+    frontColor: a0d192
+    backColor: 66875d
+    lightColor: a0d192
+    hitColor: a0d192
+    shootEffect: {
+      particles: 12
+      lifetime: 45
+      length: 6
+      baseLength: 0
+      interp: pow10Out
+      sizeInterp: linear
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 66875d
+      colorTo: a0d19230
+    }
+    despawnEffect: {
+      particles: 6
+      line: true
+      lifetime: 90
+      length: 30
+      baseLength: 0
+      interp: pow4Out
+      sizeInterp: pow4Out
+      sizeFrom: 3
+      lenFrom: 6
+      lenTo: 0
+      rotWithParent: true
+      cone: 45
+      sizeTo: 3
+      colorFrom: 66875d
+      colorTo: 66875d
+    }
+    hitEffect: {
+      particles: 6
+      line: true
+      lifetime: 90
+      length: 30
+      baseLength: 0
+      interp: pow3Out
+      sizeInterp: pow3Out
+      sizeFrom: 3
+      lenFrom: 6
+      lenTo: 0
+      rotWithParent: true
+      cone: 45
+      sizeTo: 3
+      colorFrom: 66875d
+      colorTo: 66875d
+    }
+    smokeEffect: airBubble
+    makeFire: false
+    buildingDamageMultiplier: 0.15
+  }
+  flux-alloy: {
+    type: MissileBulletType
+    trailEffect: none
+    sprite: bullet
+    homingPower: 0
+    damage: 30
+    speed: 3
+    weaveScale: 1.7
+    weaveMag: 2
+    lifetime: 45
+    reloadMuliiplier: .8
+    ammoMultiplier: 2
+    shrinkX: 0.2
+    shrinkY: 0.8
+    trailLength: 10
+    width: 10
+    height: 16
+    trailColor: ed9d6e
+    frontColor: 753636
+    backColor: ed9d6e
+    lightColor: 753636
+    hitColor: 753636
+    shootEffect: {
+      particles: 12
+      lifetime: 45
+      length: 6
+      baseLength: 0
+      interp: pow10Out
+      sizeInterp: linear
+      sizeFrom: 4
+      sizeTo: 0
+      colorFrom: 753636
+      colorTo: 75363690
+    }
+    despawnEffect: {
+      particles: 6
+      line: true
+      lifetime: 90
+      length: 30
+      baseLength: 0
+      interp: pow4Out
+      sizeInterp: pow4Out
+      sizeFrom: 3
+      lenFrom: 6
+      lenTo: 0
+      rotWithParent: true
+      cone: 45
+      sizeTo: 3
+      colorFrom: 753636
+      colorTo: 75363660
+    }
+    hitEffect: {
+      particles: 6
+      line: true
+      lifetime: 90
+      length: 30
+      baseLength: 0
+      interp: pow3Out
+      sizeInterp: pow3Out
+      sizeFrom: 3
+      lenFrom: 6
+      lenTo: 0
+      rotWithParent: true
+      cone: 45
+      sizeTo: 3
+      colorFrom: 753636
+      colorTo: 75363670
+    }
+    smokeEffect: airBubble
+    makeFire: false
+    buildingDamageMultiplier: 0.15
+  }
+research: core-veil
