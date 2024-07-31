@@ -1,0 +1,8 @@
+name: Molten Vanadium
+description: Molten, high-temperature magnetite. Can be cooled for use, or alloyed with other metals.
+temperature: 1
+viscosity: 0.85
+effect: melting
+color: d697f7
+lightColor: d697f768
+research: core-veil
