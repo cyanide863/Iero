@@ -1,0 +1,21 @@
+category: distribution
+
+speed: 18.8
+description: Transports items forwards.
+itemCapacity: 2
+bridgeReplacement: duct-bridge
+underBullets: true
+solid: true
+requirements: [
+tungsten1/1
+]
+research: {
+planet: tantros
+name: Sealed Conveyor
+parent: core-pike
+requirements: [
+tungsten1/5
+]
+}
+envEnabled: 5
+envDisabled: 0
