@@ -1,0 +1,5 @@
+type: OreBlock
+name: Tungsten
+description: Oddly pure tungsten. used in simple constructions and.
+itemDrop: tungsten2
+variants: 3
