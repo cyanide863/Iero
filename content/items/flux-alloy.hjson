@@ -1,0 +1,10 @@
+name: Flux Alloy
+description: Conductive, Used in construction of heating elements.
+cost: 1.2
+color: a65c53
+charge: 0.5
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: vanadium
