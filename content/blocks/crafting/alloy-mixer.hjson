@@ -1,0 +1,104 @@
+type: multicraft.MultiCrafter
+name: Alloy Mixer
+description: Mixes various liquefied metals into alloys.
+size: 4
+health: 980
+category: crafting
+researchCost: [
+  tungsten1/250
+  vanadium/215
+  magnesium/195
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 48
+hasLiquids: true
+ambientSound: smelter
+ambientSoundVolume: 0.06
+requirements: [
+  tungsten1/90
+  vanadium/65
+  magnesium/55
+]
+recipes: [
+{
+  input: {
+    fluids: [
+      iero-molten-vanadium/0.2
+      iero-molten-magnesium/0.2
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-molten-flux-alloy/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+  {
+  input: {
+    fluids: [
+      iero-molten-galvanium/0.2
+      iero-molten-tungsten/0.2
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-molten-fragsteel/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      iero-molten-magnesium/0.2
+      iero-molten-tungsten/0.2
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-molten-detrium/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+     type: drawRegion
+     suffix: -rotator
+     spinSprite: true
+     rotateSpeed: 12
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-flux-alloy
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-fragsteel
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-detrium
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+research: cooling-vat
