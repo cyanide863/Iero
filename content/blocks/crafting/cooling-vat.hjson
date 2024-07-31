@@ -1,0 +1,119 @@
+type: multicraft.MultiCrafter
+name: Cooling vant
+description: Rapidly takes in air from the surroundings in order to cool down metals into usable sheets.
+details: Despite nitrogen and hydrogen’s low capacity for energy, Abyssus’s atmosphere is cold enough to allow air’s usage as coolant.
+size: 3
+health: 390
+category: crafting
+researchCost: [
+  tungsten1/30
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 18
+hasLiquids: true
+hasItems: true
+itemCapacity: 12
+ambientSound: steam
+ambientSoundVolume: 0.01
+requirements: [
+  tungsten1/60
+]
+
+recipes: [
+{
+  input: {
+    fluids: [
+      iero-molten-vanadium/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      iero-vanadium/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      iero-molten-magnesium/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      iero-magnesium/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      iero-molten-galvanium-alloy/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      iero-galvanium-alloy/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      iero-molten-flux-alloy/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      iero-flux-alloy/1
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      
+      //pixels from edge to do it from
+      padding: 6
+      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
+      
+      //liquid to draw
+      drawLiquid: molten-vanadium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-magnesium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-galvanium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: molten-flux-alloy
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+research: induction-vat
