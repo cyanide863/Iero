@@ -1,0 +1,10 @@
+name: Magnetite
+description: Raw vanadium with other trace minerals. Must be refined before use.
+cost: 0.5
+color: d697f7
+hardness: 1
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: tungsten-but-stolen
