@@ -1,0 +1,8 @@
+name: Molten Detrium
+description: Molten, high-temperature detrium. Can be cooled for use, or alloyed with other metals.
+temperature: 1.2
+viscosity: 0.85
+effect: melting
+color: c7f6ff
+lightColor: c7f6ff68
+research: molten-lithonium
