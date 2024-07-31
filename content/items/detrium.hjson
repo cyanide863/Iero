@@ -1,0 +1,9 @@
+name: Detrium
+description: A volatile metal used in energy storage and reactors.
+cost: 1.2
+color: e0a0b9
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: magnesium
