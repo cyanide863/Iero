@@ -1,4 +1,3 @@
-
 squareSprite: false
 researchCostMultiplier: .25
 ammoPerShot: 1
@@ -35,47 +34,49 @@ type: drawTurret
 parts: [
 {
 type: RegionPart
-recoilIndex: 0
+recoilIndex: 2
 moveY: -2.5
 suffix: -barrel-r
 under: true
 heatProgress: recoil
+progress: recoil
+}
+{
+type: RegionPart
+recoilIndex: 0
+moveY: -2.5
+suffix: -barrel-l
+heatProgress: recoil
+under: true
 progress: recoil
 }
 {
 type: RegionPart
 recoilIndex: 1
 moveY: -2.5
-suffix: -barrel-mid
-under: true
+suffix: -mid
 heatProgress: recoil
-progress: recoil
-}
-{
-type: RegionPart
-recoilIndex: 2
-moveY: -2.5
-suffix: -barrel-r
 under: true
-heatProgress: recoil
 progress: recoil
 }
 {
 type: RegionPart
 recoilIndex: 0
-moveY: 2.5
-suffix: -back-r
+moveY: -2.5
+suffix: -back-l
+fipSprite: true
 under: true
 heatProgress: recoil
 progress: recoil
+flipSprite: true
 }
 {
 type: RegionPart
 recoilIndex: 2
-moveY: 2.5
-suffix: -back-l
-under: true
+moveY: -2.5
+suffix: -back-r
 heatProgress: recoil
+under: true
 progress: recoil
 }
 ]
