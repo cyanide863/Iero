@@ -33,7 +33,7 @@ drawer: {
   parts: [
     {
       type: RegionPart
-      suffix: -barrel-r
+      suffix: -barrel
       mirror: false
       under: true
       progress: recoil
@@ -44,7 +44,7 @@ drawer: {
     }
     {
       type: RegionPart
-      suffix: -barrel-l
+      suffix: -barrel1
       mirror: false
       under: true
       progress: recoil
