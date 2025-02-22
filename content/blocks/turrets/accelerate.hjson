@@ -1,0 +1,271 @@
+type: ItemTurret
+name: Fracture
+description: Fires a shotgun blast, requires lithium to fire.
+category: turret
+size: 4
+health: 600
+range: 450
+rotateSpeed: 1.2
+reload: 500
+recoil: 3
+outlineColor: 1f1f26
+outlineRadius: 5
+heatColor: 8aff61
+shootSound: heavyCannon
+requirements: [
+  tantalum/190
+  lithium/160
+  ignium/180
+  radith/160
+]
+researchCost: [
+  tantalum/3800
+  lithium/3200
+  ignium/3600
+  radith/3200
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: underwater-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -mid
+      mirror: false
+      heatColor: 8aff61
+      under: true
+      progress: recoil
+      moveY: -2.5
+    }
+    {
+      type: RegionPart
+      suffix: -heat
+      mirror: false
+      heatColor: 8aff61
+      colorTo: 8aff61
+      color: 8aff61
+      mixColor: 8aff61
+      mixColorTo: ffffff00
+      under: true
+      progress: reload
+      outline: false
+      blending: additive
+    }
+    {
+      type: RegionPart
+      suffix: -wing
+      layerOffset: -0.001
+      mirror: true
+      heatColor: 8aff61
+      under: true
+      progress: warmup
+      heatProgress: warmup
+      moveY: -2
+      moveX: 7
+      moveRot: 135
+      moves: [
+        {
+          rot: -10
+          progress: {
+            type: recoil
+            op: delay
+            amount: 0.8
+          }
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: -wing
+      layerOffset: -0.001
+      mirror: true
+      heatColor: 8aff61
+      under: true
+      progress: warmup
+      heatProgress: warmup
+      moveY: -2
+      moveX: 8
+      moveRot: 90
+      moves: [
+        {
+          rot: -10
+          progress: {
+            type: recoil
+            op: delay
+            amount: 0.4
+          }
+        }
+      ]
+    }
+    {
+      type: RegionPart
+      suffix: -wing
+      layerOffset: -0.001
+      mirror: true
+      heatColor: 8aff61
+      under: true
+      progress: warmup
+      heatProgress: warmup
+      moveY: -2
+      moveX: 9
+      moveRot: 45
+      moves: [
+        {
+          rot: -10
+          progress: {
+            type: recoil
+            op: delay
+            amount: 0
+          }
+        }
+      ]
+    }
+  ]
+}
+ammoTypes: {
+radith: {
+    type: ArtilleryBulletType
+    speed: 6
+    lifetime: 75
+    damage: 120
+    splashDamage: 100
+    splashDamageRadius: 32
+    width: 24
+    height: 35
+    frontColor: ffffff
+    backColor: 8aff61
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+    trailChance: 0.3
+    trailLength: 8
+    trailWidth: 6
+    trailEffect: disperseTrail
+    trailRotation: true
+    splashDamage: 45
+    despawnHit: true
+    despawnEffect: [
+    {
+type: explosionEffect
+waveColor: 8aff61	
+smokeColor: 8aff61	
+sparkColor: 8aff61	
+waveLife: 0
+waveStroke: 3
+waveRad: 15
+waveRadBase: 10
+sparkStroke: 6
+sparkRad: 80
+sparkLen: 12
+sparkLife: 40
+smokeSize: 12
+smokes: 15
+smokeSizeBase: 0
+smokeRad: 35
+sparks: 35
+    }
+    ]
+    splashDamageRadius: 16
+    trailColor: 8aff61
+    fragBullets: 10
+    fragRandomSpread: 0
+    fragSpread: 36
+    fragVelocityMin: 1
+    fragVelocityMax: 1
+    fragLifeMin: 1
+    fragLifeMax: 1
+    fragBullet: {
+      type: MissileBulletType
+      despawnSound: dull-explosion
+      speed: 6
+      lifetime: 10
+      height: 12
+      width: 8
+      trailWidth: 2
+      trailLength: 4
+      homingPower: 0.08
+      homingRange: 50
+      frontColor: ffffff
+      backColor: 8aff61
+      hitColor: 8aff61
+      trailColor: 8aff61
+      pierce: true 
+      damage: 20
+    fragBullets: 2
+    fragAngle: 90
+    fragRandomSpread: 0
+    fragSpread: 180
+    fragVelocityMin: 1
+    fragVelocityMax: 1
+    fragLifeMin: 1
+    fragLifeMax: 1
+    fragBullet: {
+      type: MissileBulletType
+      despawnSound: dull-explosion
+      speed: 6
+      lifetime: 10
+      height: 12
+      width: 8
+      trailWidth: 2
+      trailLength: 4
+      homingPower: 0.08
+      homingRange: 50
+      frontColor: ffffff
+      backColor: 8aff61
+      hitColor: 8aff61
+      trailColor: 8aff61
+      pierce: true 
+      damage: 20
+      despawnHit: true
+      despawnEffect: {
+type: explosionEffect
+waveColor: 8aff61	
+smokeColor: 8aff61	
+sparkColor: 8aff61	
+waveLife: 0
+waveStroke: 6
+waveRad: 50
+waveRadBase: 40
+sparkStroke: 2
+sparkRad: 40
+sparkLen: 6
+sparkLife: 30
+smokes: 0
+sparks: 12  
+      }
+    }
+    }
+    spawnBullets: [
+    {
+      instantDisappear: true
+      fragRandomSpread: 20
+      fragBullets: 12
+      fragBullet: {
+      type: BasicBulletType
+      despawnSound: dullExplosion
+      speed: 6
+      lifetime: 30
+      height: 12
+      width: 8
+      trailWidth: 2
+      trailLength: 4
+      homingPower: 0.08
+      homingRange: 50
+      frontColor: ffffff
+      backColor: 8aff61
+      weaveScale: 3
+      weaveMag: 2
+      hitColor: 8aff61
+      trailColor: 8aff61
+      pierce: true
+      damage: 20
+      }
+}
+    ]
+  }
+}
+research: {
+  parent: 1-core-gleam
+}

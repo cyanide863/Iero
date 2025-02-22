@@ -1,0 +1,87 @@
+  "type": "missile",
+  outlineColor: 1f1f26
+  "flying": true,
+  "template": "MissileUnitType",
+  "playerControllable": false,
+  "logicControllable": false,
+  "missileAccelTime": 10,
+  "hidden": false,
+  "speed": 8,
+  "lifetime": 100,
+  "deathExplosionEffect": {
+	  "type": "MultiEffect",
+	  "effects": [
+	  {
+          "type": "ParticleEffect",
+          "particles": 22,
+          "sizeFrom": 8,
+          "sizeTo": 0,
+          "length": 75,
+          "lifetime": 75,
+          "interp": "circleOut",
+          "colorFrom": "ffad61",
+          "colorTo": "d16a3d",
+    },
+    {
+type: explosionEffect
+waveColor: ffad61	
+smokeColor: ffad61	
+sparkColor: ffad61	
+waveLife: 0
+waveStroke: 3
+waveRad: 15
+waveRadBase: 10
+sparkStroke: 6
+sparkRad: 80
+sparkLen: 12
+sparkLife: 40
+smokeSize: 12
+smokes: 15
+smokeSizeBase: 0
+smokeRad: 35
+sparks: 35
+    }
+	{
+		"type": "WaveEffect",
+		"lifetime": 75,
+		"sizeFrom": 0,
+		"sizeTo": 50,
+		"strokeFrom": 8,
+		"strokeTo": 0,
+		"colorFrom": "ffffff"
+         colorTo: ffad6100
+	}
+   ]
+  },
+  "trailColor": "ffad61",
+  "trailLength": 9,
+  "deathSound": "none",
+  "weapons": [
+    {
+      "shootCone": 360,
+      "mirror": false,
+      "reload": 1,
+      "shootOnDeath": true,
+	  "shootSound": "largeExplosion",
+      "shake": 5,
+      "bullet": {
+        "type": "ExplosionBulletType",
+        "splashDamage": 400,
+        "splashDamageRadius": 60,
+        "buildingDamageMultiplier": 0.3,
+        "hitShake": 18,
+        "reflectable": false,
+      }
+    }
+  ]
+abilities: [
+  {
+    type: MoveEffectAbility
+    teamColor: true
+    effect: bubble
+    x: 0
+    y: -6.6
+    interval: 4
+    minVelocity: 0.6
+  }
+]

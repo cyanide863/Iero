@@ -1,0 +1,10 @@
+type: item
+name: Lithium
+description: A soft metal, can be discharged for power.
+cost: 1
+color: 84d3eb
+flammability: 0
+explosiveness: 0.4
+radioactivity: 0
+charge: 0.8
+research: eromium

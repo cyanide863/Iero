@@ -1,0 +1,91 @@
+type: ItemTurret
+name: Fracture
+description: Fires a shotgun blast, requires lithium to fire.
+category: turret
+size: 3
+health: 500
+range: 160
+rotateSpeed: 5
+reload: 120
+recoil: 1
+outlineColor: 1f1f26
+outlineRadius: 5
+heatColor: 84d3eb
+shootSound: shoot1
+velocityRnd: 0.25
+requirements: [
+  tantalum/30
+  eromium/70
+  lithium/90
+]
+researchCost: [
+  tantalum/60
+  eromium/140
+  lithium/180
+]
+shoot: {
+    type: shootSpread
+    shots: 18
+    spread: 7
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: underwater-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -wing
+      mirror: true
+      heatColor: 84d3eb
+      under: true
+      progress: recoil
+      moveY: -1.2
+      moveX: 1
+      moveRot: -2
+    }
+  ]
+}
+ammoTypes: {
+lithium: {
+    type: BasicBulletType
+    speed: 8
+    lifetime: 20
+    damage: 15
+    width: 24
+    height: 26
+    frontColor: ffffff
+    backColor: 84d3eb
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    despwanHit: true
+    despawnEffect: {
+type: explosionEffect
+waveColor: 84d3eb	
+smokeColor: 84d3eb	
+sparkColor: 84d3eb	
+waveLife: 20	
+waveStroke: 3
+waveRad: 15
+waveRadBase: 10
+sparkStroke: 3
+sparkRad: 20
+sparkLen: 5
+smokeSize: 5
+smokeSizeBase: 0
+smokeRad: 6
+sparks: 5
+    }
+    trailChance: 0.3
+    trailWidth: 5
+    trailLength: 8
+    trailEffect: pointHit
+    trailRotation: true
+    lightningColor: 84d3eb
+    trailColor: 84d3eb
+  }
+}
+research: {
+  parent: 1-core-gleam
+}

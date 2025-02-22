@@ -1,0 +1,15 @@
+type: DuctBridge
+name: Pressurized Bridge
+description: Acts as a bridge for crossing terrain.
+health: 135
+size: 1
+requirements: [
+  tantalum/8
+  eromium/4
+] 
+category: distribution
+research: pressurized-duct
+squareSprite: false
+range: 6
+speed: 3
+researchCostMultiplier: 5

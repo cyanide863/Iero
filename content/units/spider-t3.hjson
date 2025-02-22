@@ -1,0 +1,123 @@
+type: legs
+name: Sirius
+description: Fires a salvo of small energy missiles, can move over most terrain.
+speed: 0.45
+health: 8900
+armor: 17
+flying: false
+  "legMoveSpace": 1,
+  "legMaxLength": 1.1,
+  "legMinLength": 0.2,
+  "legLengthScl": 0.96,
+  "legForwardScl": 1.1,
+  "legPhysicsLayer": false,
+  "legGroupSize": 4,
+  "legCount": 4,
+  "legExtension": -2,
+  "legContinuousMove": true,
+  "lockLegBase": true,
+  "rippleScale": 0.3,
+  "legBaseOffset": 12,
+  "legLength": 16,
+  "allowLegStep": true,
+  "hovering": true,
+itemCapacity: 0
+outlineColor: 1f1f26
+outlineRadius: 5
+hitSize: 25
+groundLayer: 75
+"weapons": [
+		{
+    "reload": 50,
+    "mirror": true,
+    name: spider-t3-weapon
+    "x": 16,
+shoot: {
+  type: ShootMulti
+  source: {
+    type: ShootSpread
+    shots: 3
+    spread: 2
+  }
+  dest: [
+    {
+    type: shootHelix
+    scl: 6
+    mag: 4
+    }
+  ]
+}
+
+    "y": 0,
+    layerOffset: -0.001
+    "shootY": 6,
+    "recoil": 2,
+    "rotate": false,
+    shootSound: malignShoot
+    bullet: {
+      type: BasicBulletType
+      speed: 16
+      sprite: large-bomb
+      spin: -3
+      shrinkY: 0
+      lifetime: 38
+      homingPower: 0.08
+      homingRange: 90
+      damage: 20
+      drag: 0.1
+      splashDamage: 25
+      splashDamageRadius: 16
+      width: 16
+      height: 16
+      frontColor: ffffff
+      backColor: a054c6
+      despawnHit: true
+      despawnEffect: [
+        {
+type: explosionEffect
+waveColor: a054c6	
+smokeColor: a054c6	
+sparkColor: a054c6
+sparkStroke: 4
+sparkRad: 17
+sparkLen: 7
+sparkLife: 30
+smokes: 6
+smokeRad: 25
+smokeSize: 8
+sparks: 4
+        }
+      ]
+    trailChance: 0.25
+    trailWidth: 4
+    trailLength: 10
+    trailColor: a054c6
+    fragAngle: 90
+    fragRandomSpread: 30
+    fragBullets: 2
+    fragSpread: 180
+    fragBullet: {
+        width: 7.2
+        drawFlare: false
+        hitColor: a054c6
+        type: ContinuousFlameBulletType
+        hitEffect: hitFlameBeam
+        damage: 20
+        length: 80
+        pierceCap: 8
+        colors: [6e2e9970, a054c6, ffffff]
+        lightColor: a054c6  
+      }
+    }
+  }
+]
+//research: {
+//    parent: "Constructor-2",
+//    objectives: [
+//        {
+//            type: "OnSector",
+//           preset: "Lonely-lake"
+//      }
+//    ]
+//}
+researchCostMultiplier: 1.2

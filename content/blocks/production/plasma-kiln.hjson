@@ -1,0 +1,63 @@
+{
+  "type": "MultiBlockCrafter",
+  "name": "example",
+  "linkValues": [2, 0, 1, 2, 1, 1, -1, 0, 1, -1, 1, 1],
+  "size": 2,
+  "hasPower": true,
+  "hasLiquids": true,
+  "hasItems": true,
+  "outputItem": { "item": "ignium", "amount": 2},
+  "consumes": {
+    "power": 1,
+    "items": {
+      "items": [
+        { "item": "tantalum", "amount": 4},
+      ]
+    },
+    "liquids": [
+      {"liquid": "magma","amount":0.3}
+    ]
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    iconOverride: [
+      -icon
+    ]
+    "drawers": [
+      {
+        "type": "DrawRegionRotated",
+        "suffix": "-bottom",
+        "oneSprite": true
+      },
+	  {
+		"type": "DrawLiquidRegionRotated",
+		"suffix": "-liquid-magma",
+		"drawLiquid": "magma"
+         alpha: 5
+	  },
+      {
+        "type": "DrawDefault",
+      },
+	  {
+		"type": "DrawFlameRotated",
+		"x": 8,
+		"y": 0
+        flameColor: ffad61
+	  }
+	  {
+		"type": "DrawFlameRotated",
+		"x": 8,
+		"y": 0
+        flameColor: ffad61
+	  }
+     {
+        "type": "DrawRegionRotated",
+        "suffix": "-rot"
+      },
+    ]
+  },
+  "requirements": [
+    { "item": "copper", "amount": 30 }
+  ],
+  "category": "crafting"
+}

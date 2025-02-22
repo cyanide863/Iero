@@ -1,0 +1,77 @@
+{
+  "type": "MultiBlockCrafter",
+  "name": "example",
+  "linkValues": [2, -1, 2, -1, 2, 2],
+  "size": 3,
+  "hasPower": true,
+  "hasLiquids": true,
+  "hasItems": true,
+  "outputItem": { "item": "aero-composite", "amount": 2},
+  "consumes": {
+    "power": 1,
+    "items": {
+      "items": [
+        { "item": "eromium", "amount": 2},
+        { "item": "lithium", "amount": 4},
+      ]
+    },
+    "liquids": [
+      {"liquid": "hydrogen","amount":0.3}
+      {"liquid": "water","amount":0.6}
+    ]
+  },
+  "drawer": {
+    "type": "DrawMulti",
+    iconOverride: [
+      -icon
+    ]
+    "drawers": [
+      {
+        "type": "DrawRegionRotated",
+        "suffix": "-bottom",
+        "oneSprite": true
+      },
+	  {
+		"type": "DrawLiquidRegionRotated",
+		"suffix": "-liquid-water",
+		"drawLiquid": "water"
+         alpha: 5
+	  },
+	  {
+		"type": "DrawLiquidRegionRotated",
+		"suffix": "-liquid-hydrogen",
+		"drawLiquid": "hydrogen"
+         alpha: 5
+	  },
+      {
+        "type": "DrawDefault",
+      },
+	  {
+		"type": "DrawFlameRotated",
+		"x": 8,
+		"y": 0
+        flameColor: abb7e3
+	  }
+	  {
+		"type": "DrawFlameRotated",
+		"x": 0,
+		"y": 8
+        flameColor: abb7e3
+	  }
+	  {
+		"type": "DrawFlameRotated",
+		"x": 0,
+		"y": 0
+        flameColor: abb7e3
+	  }
+     {
+        "type": "DrawRegionRotated",
+        "suffix": "-rot"
+      },
+    ]
+  },
+  "requirements": [
+    { "item": "copper", "amount": 30 }
+  ],
+  "category": "crafting"
+}

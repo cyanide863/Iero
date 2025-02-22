@@ -1,0 +1,15 @@
+type: Duct
+name: Pressurized duct
+description: Transports items using magnetic belts.
+category: distribution
+alwaysUnlocked: true
+research: 1-core-gleam
+researchCost: [
+  tantalum/10
+]
+speed: 4.5
+health: 50
+bridgeReplacement: pressurized-duct-bridge
+requirements: [
+  tantalum/1
+]

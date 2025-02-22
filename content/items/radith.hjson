@@ -1,0 +1,10 @@
+type: item
+name: Radith
+description: Slightly radioactive mineral, very dense.
+cost: 1
+color: 8aff61
+flammability: 0
+explosiveness: 0.2
+radioactivity: 0.6
+charge: 0
+research: lithium

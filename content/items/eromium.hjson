@@ -1,0 +1,10 @@
+type: item
+name: Eromium
+description: An electrical mineral used in power and infrastructure.
+cost: 1
+color: d47bf4
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0.5
+research: 1-core-gleam

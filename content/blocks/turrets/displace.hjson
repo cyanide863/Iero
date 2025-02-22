@@ -1,0 +1,118 @@
+type: ItemTurret
+name: Fracture
+description: Fires a shotgun blast, requires lithium to fire.
+category: turret
+size: 4
+health: 600
+range: 800
+rotateSpeed: 1.2
+reload: 500
+recoil: 3
+outlineColor: 1f1f26
+outlineRadius: 5
+heatColor: 84d3eb
+shootSound: missileLarge
+velocityRnd: 0.25
+requirements: [
+  tantalum/160
+  eromium/90
+  lithium/120
+  ignium/180
+  radith/90
+]
+researchCost: [
+  tantalum/1600
+  eromium/900
+  lithium/1200
+  ignium/1800
+  radith/900
+]
+heatRequirement: 50
+maxEfficiency: 2
+shoot: {
+    shots: 3
+    shotDelay: 4
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: underwater-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -missile
+      mirror: false
+      heatColor: 84d3eb
+      layerOffset: -0.001
+      under: true
+      progress: reload
+      colorFrom: ffffff00
+      mixColor: ffad61
+      color: ffffff
+    }
+    {
+      type: RegionPart
+      suffix: -front
+      mirror: true
+      heatColor: 84d3eb
+      under: true
+      progress: warmup
+      moveY: -2
+      moveX: 2.5
+      moveRot: -2
+    }
+  ]
+}
+ammoTypes: {
+ignium: {
+    type: BasicBulletType
+    instantDisappear: true
+    spawnUnit: iero-displace-missile
+    shootEffect: [
+      {
+      type: ParticleEffect
+      particles: 18
+      sizeFrom: 6
+      sizeTo: 0
+      length: 20
+      startDelay: 0
+      lifetime: 40
+      cone: 20
+      interp: circleOut
+      colorFrom: ffad61
+      colorTo: d16a3d
+      baseRotation: 180
+      }
+      {
+      type: ParticleEffect
+      particles: 10
+      sizeFrom: 6
+      sizeTo: 0
+      length: 60
+      startDelay: 5
+      lifetime: 40
+      cone: 20
+      interp: circleOut
+      colorFrom: ffad61
+      colorTo: d16a3d
+      baseRotation: 180
+      }
+      {
+      type: ParticleEffect
+      particles: 5
+      sizeFrom: 6
+      sizeTo: 0
+      length: 80
+      startDelay: 25
+      lifetime: 40
+      cone: 20
+      interp: circleOut
+      colorFrom: ffad61
+      colorTo: d16a3d
+      baseRotation: 180
+      }
+    ]
+  }
+}
+research: {
+  parent: 1-core-gleam
+}

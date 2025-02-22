@@ -1,0 +1,9 @@
+"displayName": "[green]Iero",
+"name": "iero",
+"author": "[#3c3592[]]H[#5741a2[]]y[#704eb2[]]p[#8a5bc2[]]e[#8a5bc2[]]r[#a369d2[]]i[[]]u[#a369d2[]]m[white[]]",
+"description": "Iero."
+"minGameVersion": "146",
+"version": "[cyan]0.01"
+dependencies: [
+"multi-block-lib"
+]

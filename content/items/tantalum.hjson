@@ -1,0 +1,10 @@
+type: item
+name: Tantalum
+description: A dense metal used in reinforcing.
+cost: 1
+color: 4e4c5e
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: eromium

@@ -1,0 +1,105 @@
+type: legs
+name: Vega
+description: Fires a salvo of small energy missiles, can move over most terrain.
+speed: 0.5
+health: 3670
+armor: 12
+flying: false
+  "legMoveSpace": 1,
+  "legMaxLength": 1.1,
+  "legMinLength": 0.2,
+  "legLengthScl": 0.96,
+  "legForwardScl": 1.1,
+  "legPhysicsLayer": false,
+  "legGroupSize": 4,
+  "legCount": 6,
+  "legExtension": -2,
+  "legContinuousMove": true,
+  "lockLegBase": true,
+  "rippleScale": 0.2,
+  "legBaseOffset": 9,
+  "legLength": 17,
+  "allowLegStep": true,
+  "hovering": true,
+itemCapacity: 0
+outlineColor: 1f1f26
+outlineRadius: 5
+hitSize: 18
+groundLayer: 75
+"weapons": [
+		{
+    "reload": 25,
+    "mirror": true,
+    name: spider-t2-shotgun
+    "x": 12,
+    inaccuracy: 4
+    velocityRnd: 0.4
+shoot: {
+shots: 3
+}
+    "y": 0,
+    layerOffset: -0.001
+    "shootY": 6,
+    "recoil": 1,
+    "rotate": false,
+    shootSound: nailZap
+    bullet: {
+      type: BasicBulletType
+      speed: 6
+      sprite: circle-bullet
+      lifetime: 35
+      damage: 60
+      splashDamage: 30
+      splashDamageRadius: 12
+      width: 16
+      height: 16
+      frontColor: ffffff
+      backColor: a054c6
+      despawnHit: true
+      despawnEffect: [
+        {
+type: explosionEffect
+waveColor: a054c6	
+smokeColor: a054c6	
+sparkColor: a054c6
+sparkStroke: 4
+sparkRad: 17
+sparkLen: 7
+sparkLife: 30
+smokes: 6
+smokeRad: 25
+smokeSize: 8
+sparks: 4
+        }
+      ]
+    trailChance: 0.25
+    trailWidth: 4
+    trailLength: 10
+    trailColor: a054c6
+    spawnBullets: [
+        {
+        instantDisappear: true
+        despawnEffect: none
+        fragRandomSpread: 20
+        fragBullets: 1
+        fragBullet: {
+            type: LightningBulletType
+            lightningColor: a054c6
+            lightningLength: 7
+            lightningLengthRand: 4
+          }
+        }
+      ]
+    }
+  }
+]
+//research: {
+//    parent: "Constructor-2",
+//    objectives: [
+//        {
+//            type: "OnSector",
+//           preset: "Lonely-lake"
+//      }
+//    ]
+//}
+researchCostMultiplier: 1.2

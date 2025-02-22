@@ -1,0 +1,6 @@
+type: TallBlock
+name: Coldstone monolith
+variants: 2
+clipSize: 96
+emitLight: true
+lightColor: 74b6c4

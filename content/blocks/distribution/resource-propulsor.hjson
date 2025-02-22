@@ -1,0 +1,18 @@
+type: MassDriver
+name: Item propulsor
+description: Fires batches of items over medium distances to another Item Propulsor in range. Requires power.
+size: 2
+outlineColor: 1f1f26
+squareSprite: false
+itemCapacity: 20
+reload: 60
+range: 100
+consumes: {
+  power: 2
+}
+category: distribution
+research: pressurized-duct
+requirements: [
+  tantalum/20
+  lithium/32
+]

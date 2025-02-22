@@ -1,0 +1,9 @@
+name: Coldstone vent
+type: SteamVent
+blendGroup: coldstone-floor
+parent: coldstone-floor
+effect: ventSteam
+effectColor: 171d30
+attributes: {
+   heat: 1
+}

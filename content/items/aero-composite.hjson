@@ -1,0 +1,10 @@
+type: item
+name: Aero composite
+description: A lightweight composite very useful in advanced technology.
+cost: 1
+color: ffad61
+flammability: 0
+explosiveness: 0
+radioactivity: 0
+charge: 0
+research: tantalum

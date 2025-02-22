@@ -1,0 +1,122 @@
+type: ItemTurret
+name: Focus
+description: A small turret, fires small bullets at targets.
+category: turret
+size: 3
+health: 500
+range: 180
+rotateSpeed: 5
+reload: 40
+xRand: 1
+recoil: 1
+outlineColor: 1f1f26
+outlineRadius: 5
+heatColor: d47bf4
+shootSound: plasmadink
+requirements: [
+  tantalum/60
+  eromium/95
+]
+researchCost: [
+  tantalum/120
+  eromium/190
+]  
+drawer: {
+  type: DrawTurret
+  basePrefix: underwater-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -front
+      mirror: false
+      heatColor: d47bf4
+      under: true
+      progress: recoil
+      moveY: -1.2
+    }
+  ]
+}
+ammoTypes: {
+  eromium: {
+    type: BasicBulletType
+    speed: 6
+    lifetime: 36
+    damage: 40
+    width: 14
+    height: 16
+    frontColor: ffffff
+    backColor: d47bf4
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+    trailChance: 0.3
+    trailLength: 8
+    lightning: 3
+    trailEffect: disperseTrail
+    trailRotation: true
+    lightningLength: 5
+    lightningLengthRand: 3
+    lightningColor: d47bf4
+    lightningDamage: 10
+    trailWidth: 4
+    trailColor: d47bf4
+  }
+  ignium: {
+    type: BasicBulletType
+    shoot: {
+        shots: 3
+        shotDelay: 2
+    }
+    speed: 8
+    lifetime: 30
+    rangeChange: 60
+    damage: 30
+    pierceCap: 2
+    width: 14
+    height: 16
+    frontColor: ffffff
+    backColor: ffad61
+    shootEffect: shootSmall
+    smokeEffect: shootSmallSmoke
+    ammoMultiplier: 4
+    collidesTiles: true
+    hitEffect: pointHit
+    trailChance: 0.3
+    trailLength: 8
+    trailEffect: vapor
+    trailRotation: true
+    splashDamage: 45
+    splashDamageRadius: 16
+    trailColor: ffad61
+    fragBullets: 6
+    fragRandomSpread: 0
+    fragSpread: 30
+    fragVelocityMin: 1
+    fragVelocityMax: 1
+    fragLifeMin: 1
+    fragLifeMax: 1
+    fragBullet: {
+      type: MissileBulletType
+      despawnSound: dull-explosion
+      speed: 6
+      lifetime: 10
+      height: 12
+      width: 8
+      trailWidth: 2
+      trailLength: 4
+      homingPower: 0.08
+      homingRange: 50
+      frontColor: ffffff
+      backColor: ffad61
+      hitColor: ffad61
+      trailColor: ffad61
+      pierce: true 
+      damage: 20
+    }
+  }
+}
+research: {
+  parent: 1-core-gleam
+}

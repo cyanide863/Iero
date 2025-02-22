@@ -1,0 +1,9 @@
+gas: false
+color: d16a3d
+name: Magma
+description: Very hot and molten rock
+explosiveness: 0
+flammability: 0
+temperature: 0.9
+viscosity: 0.5
+heatCapacity: 0.5

@@ -1,0 +1,106 @@
+    generator: "PlanetGenerator",
+    displayName: Iero
+    description: An oceanic planet
+    parent: "sun",
+    iconColor: 10d7e6,
+    orbitRadius: 75,
+    hasAtmosphere: true,
+    updateLighting: false,
+    atmosphereRadIn: 0.01,
+    atmosphereRadOut: 0.3,
+    atmosphereColor: 84d3eb,
+    drawOrbit: true,
+    accessible: true,
+    alwaysUnlocked: true,
+    icon: command-attack
+    defaultCore: "1-core-gleam",
+    sectorSeed: 73,
+    startSector: 6,
+    sectorSize: 3,
+    clearSectorOnLose: true,
+    allowSectorInvasion: false,
+	  allowLaunchToNumbered: false,
+    radius: 1,
+cloudMesh: {
+  type: HexSkyMesh
+  planet: Iero
+  seed: 2
+  speed: 3
+  radius: 0.05
+  divisions: 5
+  color: 84d3eb
+  octaves: 2
+  persistence: 1
+  scl: 2
+  thresh: 0.45
+}
+    "mesh": [
+{
+bloom: false
+type: SunMesh 
+divisions: 5
+radius: 3.6
+octaves: 1
+persistence: .5
+scl: 2
+pow: 2.2
+mag: 3
+colorScale: 1
+colors: [
+1a2560,
+1e3067
+243c6e,
+]
+}
+{
+bloom: false
+type: SunMesh 
+divisions: 5
+radius: 3.9
+octaves: 1
+persistence: .5
+scl: 2
+pow: 2.2
+mag: 3
+colorScale: 1
+colors: [
+1a256070,
+1e306770
+243c6e70,
+]
+}
+{
+bloom: false
+type: SunMesh 
+divisions: 5
+radius: 4.2
+octaves: 1
+persistence: .5
+scl: 2
+pow: 2.2
+mag: 3
+colorScale: 1
+colors: [
+1a256050,
+1e306750
+243c6e50,
+]
+}
+ {
+bloom: false
+type: NoiseMesh
+divisions: 6
+radius: .667
+color1: c8cdce
+color2: a0babf
+octaves: 3
+persistence: 1.1
+scale: 1.1
+mag: 3.9
+coct: 1.5
+cper: 1.1
+cscl: 0.7
+cthresh: .4
+bloom: false
+}
+    ] 

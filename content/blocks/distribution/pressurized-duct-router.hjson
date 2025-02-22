@@ -1,0 +1,13 @@
+type: DuctRouter
+name: Pressurized Splitter
+description: Made from Ferrinite. Distributes input items from ducts to three directions equally. 
+size: 1
+speed: 4
+health: 140
+itemCapacity: 4
+requirements: [
+  tantalum/4
+]
+squareSprite: false
+category: distribution
+researchCostMultiplier: 5

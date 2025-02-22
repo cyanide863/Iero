@@ -1,0 +1,114 @@
+type: legs
+name: Antares
+description: Fires a salvo of small energy missiles, can move over most terrain.
+speed: 0.65
+health: 680
+armor: 8
+flying: false
+  "legMoveSpace": 1,
+  "legMaxLength": 1.1,
+  "legMinLength": 0.2,
+  "legLengthScl": 0.96,
+  "legForwardScl": 1.1,
+  "legPhysicsLayer": false,
+  "legGroupSize": 4,
+  "legCount": 6,
+  "legExtension": -2,
+  "legContinuousMove": true,
+  "lockLegBase": true,
+  "rippleScale": 0.2,
+  "legBaseOffset": 5,
+  "legLength": 14,
+  "allowLegStep": true,
+  "hovering": true,
+itemCapacity: 0
+outlineColor: 1f1f26
+outlineRadius: 5
+hitSize: 15
+groundLayer: 75
+  parts: [
+    {
+      type: RegionPart
+      suffix: -glow
+      mirror: false
+      color: d47bf4
+      layer: -1
+      outline: false
+      blending: additive
+    }
+  ]
+"weapons": [
+		{
+    "reload": 40,
+    "mirror": true,
+    name: spider-t1-front
+    "x": 0,
+    alternate: false
+shoot: {
+  type: ShootMulti
+  source: {
+    type: ShootAlternate
+    spread: 10
+    shots: 2
+  }
+  dest: [
+    {
+      shots: 2
+      shotDelay: 8
+    }
+  ]
+}
+    "y": 0,
+    layerOffset: -0.001
+    "shootY": 6,
+    "recoil": 1,
+    "rotate": false,
+    shootSound: blaster
+    bullet: {
+      type: BasicBulletType
+      speed: 6
+      sprite: circle-bullet
+      lifetime: 20
+      damage: 30
+      splashDamage: 30
+      splashDamageRadius: 16
+      width: 8
+      height: 18
+      frontColor: ffffff
+      backColor: a054c6
+      despawnHit: true
+      despawnEffect: [
+        {
+type: explosionEffect
+waveColor: a054c6	
+smokeColor: a054c6	
+sparkColor: a054c6
+sparkStroke: 4
+sparkRad: 17
+sparkLen: 7
+sparkLife: 30
+smokes: 3
+smokeRad: 12
+smokeSize: 6
+sparks: 4
+        }
+      ]
+    weaveScale: 5
+    weaveMag: 2
+    trailChance: 0.25
+    trailWidth: 2
+    trailLength: 10
+    trailColor: a054c6
+    }
+  }
+]
+//research: {
+//    parent: "Constructor-2",
+//    objectives: [
+//        {
+//            type: "OnSector",
+//           preset: "Lonely-lake"
+//      }
+//    ]
+//}
+researchCostMultiplier: 1.2

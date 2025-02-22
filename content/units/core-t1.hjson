@@ -1,0 +1,44 @@
+flying: true
+name: Astrum
+description: Defends the core Gleam, armed with a repair laser.
+drag: 0.05
+speed: 4
+rotateSpeed: 10
+coreUnitDock: true
+accel: 0.05
+range: 130
+health: 660
+outlineRadius: 5
+buildSpeed: 1.2
+fogRadius: 0
+engineOffset: 6.5
+hitSize: 9
+lowAltitude: true
+itemCapacity: 50
+outlineColor: 1f1f26
+mineTier: 1
+mineSpeed: 3
+weapons: [
+{
+  type: RepairBeamWeapon
+x: 3
+y: 10
+shootY: 0
+reload: 20
+rotate: false
+beamWidth: 0.7
+shootCone: 40
+mirror: true
+repairSpeed: 0.3
+fractionRepairSpeed: 0.2
+targetUnits: true
+targetBuildings: true
+autoTarget: false
+controllable: true
+laserColor: d47bf4
+healColor: d47bf4
+bullet: {
+maxRange: 20
+    }
+}
+]

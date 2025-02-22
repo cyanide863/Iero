@@ -1,0 +1,16 @@
+type: CoreBlock
+name: Core: Gleam
+desc: A heavily armored landing core, made for an underwater environment
+enableDrawStatus: false
+squareSprite: false
+health: 4000
+armor: 20
+itemCapacity: 1500
+size: 3
+category: effect
+unitType: core-t1
+unitCapModifier: 10
+requirements: [
+   eromium/1000
+   tantalum/1200
+]

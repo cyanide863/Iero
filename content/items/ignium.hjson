@@ -1,0 +1,10 @@
+type: item
+name: Ignium
+description: A very volatile alloy, is explosive and blast resistant.
+cost: 1
+color: ffad61
+flammability: 0.4
+explosiveness: 0.8
+radioactivity: 0
+charge: 0
+research: lithium

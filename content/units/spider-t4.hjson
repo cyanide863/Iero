@@ -1,0 +1,275 @@
+type: legs
+name: Sirius
+description: Fires a salvo of small energy missiles, can move over most terrain.
+speed: 0.45
+health: 14560
+armor: 25
+flying: false
+  "legMoveSpace": 1,
+  "legMaxLength": 1.1,
+  "legMinLength": 0.2,
+  "legLengthScl": 0.96,
+  "legForwardScl": 1.1,
+  "legPhysicsLayer": false,
+  "legGroupSize": 4,
+  "legCount": 6,
+  "legExtension": -2,
+  "legContinuousMove": true,
+  "lockLegBase": true,
+  "rippleScale": 0.3,
+  "legBaseOffset": 18,
+  "legLength": 21,
+  "allowLegStep": true,
+  "hovering": true,
+itemCapacity: 0
+outlineColor: 1f1f26
+outlineRadius: 5
+hitSize: 25
+groundLayer: 75
+"weapons": [
+		{
+    "reload": 30,
+    "mirror": true,
+    name: spider-t4-weapon
+    "x": 16,
+    y: -3
+    layerOffset: 0.001
+    "shootY": 6,
+    "recoil": 2,
+     inaccuracy: 6
+    "rotate": false,
+    shootSound: bolt
+    bullet: {
+      type: BasicBulletType
+      speed: 4
+      sprite: iero-electro
+      lifetime: 60
+      homingPower: 0.04
+      homingRange: 90
+      damage: 20
+      weaveScale: 2
+      weaveMag: 6
+      splashDamage: 30
+      splashDamageRadius: 16
+      width: 18
+      height: 18
+      frontColor: ffffff
+      backColor: a054c6
+      despawnHit: true
+      despawnEffect: [
+        {
+type: explosionEffect
+waveColor: a054c6	
+smokeColor: a054c6	
+sparkColor: a054c6
+sparkStroke: 4
+sparkRad: 17
+sparkLen: 7
+sparkLife: 30
+smokes: 6
+smokeRad: 25
+smokeSize: 8
+sparks: 4
+        }
+      ]
+    trailChance: 0.25
+    trailWidth: 6
+    trailLength: 10
+    trailColor: a054c6
+    }
+  }
+		{
+    "reload": 550,
+    "mirror": false,
+    "x": 0,
+    y: 4
+    layerOffset: 0.001
+    "shootY": 6,
+    "recoil": 2,
+     inaccuracy: 6
+     shootStatus: unmoving
+     shootStatusDuration: 50
+     shoot: {
+      firstShotDelay: 50
+      shots: 16
+      shotDelay: 10
+     }
+     chargeSound: lasercharge2
+    "rotate": true,
+    rotateSpeed: 2
+    rotationLimit: 70
+    shootSound: plasma-shoot
+    bullet: {
+      type: BasicBulletType
+      speed: 4
+      sprite: iero-electro
+      lifetime: 80
+      homingPower: 0.04
+      homingRange: 90
+      damage: 60
+      weaveScale: 6
+      weaveMag: 2
+      width: 14
+      height: 25
+      frontColor: ffffff
+      backColor: a054c6
+      chargeEffect: [
+        {
+          type: particleEffect
+          cone: 70
+          length: 0
+          lifetime: 50
+          particles: 1
+          region: iero-star
+          colorTo: a054c6
+          spin: -2
+          sizeFrom: 0
+          sizeTo: 40
+        }
+        {
+          type: particleEffect
+          length: 60
+          baseLength: -60
+          interp: exp10
+          lifetime: 80
+          particles: 16
+          line: true
+          colorTo: a054c6
+          lenFrom: 6
+          lenTo: 0
+          strokeFrom: 4
+          strokeTo: 0
+        }
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 50
+          sizeFrom: 60
+          sizeTo: 60
+          strokeFrom: 8
+          strokeTo: 0
+        }
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 30
+          startDelay: 0
+          sizeFrom: 60
+          sizeTo: 0
+          strokeFrom: 8
+          strokeTo: 0
+        }
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 30
+          startDelay: 10
+          sizeFrom: 60
+          sizeTo: 0
+          strokeFrom: 8
+          strokeTo: 0
+        }
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 30
+          startDelay: 10
+          sizeFrom: 60
+          sizeTo: 0
+          strokeFrom: 8
+          strokeTo: 0
+        }
+      ]
+      despawnHit: true
+      shootEffect: [
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 50
+          sizeFrom: 0
+          sizeTo: 60
+          strokeFrom: 8
+          strokeTo: 0
+        }
+        {
+          type: waveEffect
+          colorTo: a054c6
+          lifetime: 50
+          sizeFrom: 60
+          sizeTo: 60
+          strokeFrom: 8
+          strokeTo: 0
+        }
+        {
+          type: particleEffect
+          cone: 70
+          length: 70
+          lifetime: 50
+          particles: 1
+          region: iero-star
+          colorTo: a054c6
+          spin: -2
+          sizeFrom: 10
+          sizeTo: 0
+        }
+        {
+          type: particleEffect
+          length: 60
+          lifetime: 80
+          particles: 16
+          line: true
+          colorTo: a054c6
+          lenFrom: 6
+          lenTo: 0
+          strokeFrom: 4
+          strokeTo: 0
+        }
+      ]
+      despawnEffect: [
+        {
+type: explosionEffect
+waveColor: a054c6	
+smokeColor: a054c6	
+sparkColor: a054c6
+sparkStroke: 4
+sparkRad: 25
+sparkLen: 8
+sparkLife: 30
+smokes: 8
+smokeRad: 25
+smokeSize: 12
+sparks: 6
+        }
+      ]
+    trailChance: 0.25
+    trailWidth: 4
+    trailLength: 10
+    trailColor: a054c6
+    fragRandomSpread: 30
+    fragBullets: 6
+    fragSpread: 60
+    fragBullet: {
+        width: 7.2
+        drawFlare: false
+        hitColor: a054c6
+        type: ContinuousFlameBulletType
+        hitEffect: hitFlameBeam
+        damage: 20
+        length: 80
+        pierceCap: 8
+        colors: [6e2e9970, a054c6, ffffff]
+        lightColor: a054c6  
+      }
+    }
+  }
+]
+//research: {
+//    parent: "Constructor-2",
+//    objectives: [
+//        {
+//            type: "OnSector",
+//           preset: "Lonely-lake"
+//      }
+//    ]
+//}
+researchCostMultiplier: 1.2
