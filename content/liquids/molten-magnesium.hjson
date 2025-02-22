@@ -1,8 +1,0 @@
-name: Molten Magnesium
-description: Molten, high-temperature dolomite. Can be cooled for use, or alloyed with other metals.
-temperature: 1.2
-viscosity: 0.9
-effect: melting
-color: e0a0b9
-lightColor: e0a0b968
-research: molten-vanadium

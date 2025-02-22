@@ -1,5 +1,0 @@
-type: OreBlock
-name: Magnetite
-description: Raw, impure vanadium. Must be refined before use.
-itemDrop: vanadium
-variants: 3

@@ -1,8 +1,0 @@
-name: Molten Galvanium
-description: Molten galvanium. Can be alloyed with other metals.
-temperature: 1.2
-viscosity: 0.85
-effect: melting
-color: ed9d6e
-lightColor: ed9d6e68
-research: molten-thermic-alloy
